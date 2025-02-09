@@ -1,0 +1,22 @@
+  Approach and Design Decisions
+        Data Structures used :
+            HashSet: Used for fast lookups of words to check if a given prefix or suffix exists.
+            HashMap: Memorizes the results of checking whether a word is compound, reducing repeated computation and improving performance.
+        Algorithm:
+         i used the recursive  method for solving this problem
+       step by step procedure:
+         1> Main Class:
+             Reads the input file, processes the words, and outputs the longest and second longest
+             compound words along with the processing time.
+              Here i used the read buffer method for reading the word file
+        2 Compoundwords Class: Handles the logic for checking compound words using memoization and a
+         recursive approach to identify compound words. It also sorts the words by length and finds the longest
+         ones.
+        3  isCompoundWord Method;
+           This method checks if a word is a compound word.
+           If it's a compound word, it stores the result in hm (for caching).
+           It returns true if it's a compound word and false otherwise.
+        4-findLongestCompoundWords Method:
+           This method sorts the words in descending order of their length.
+           It checks each word to see if it is a compound word using isCompoundWord().
+           if yes its store the longest and 2nd longest word and return it
